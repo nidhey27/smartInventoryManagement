@@ -13,7 +13,10 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<!--  -->
+    <!--  -->
+    <!--Fontawesome Links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- -->
 </head>
 <style>
   
@@ -1218,7 +1221,16 @@
     body {
     overflow-x: hidden;
     }
-
+    hr.new1 {
+    border-top: 1px solid grey;
+    width:85%;
+    
+    }
+    hr.new2 {
+    border-top: 1px solid grey;
+    width:85%;
+    
+    }
     #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -1232,19 +1244,21 @@
     }
 
     #sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    right: 250px;
-    width: 0;
-    height: 100%;
-    margin-right: -250px;
-    overflow-y: auto;
-    background: #212121;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+        z-index: 1000;
+        position: fixed;
+        right: 250px;
+        width: 0;
+        height: 100%;
+        top: 0 ;
+        margin-right: -250px;
+        overflow-y: auto;
+        background: #212121;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
+
 
     #wrapper.toggled #sidebar-wrapper {
     width: 250px;
@@ -1272,7 +1286,17 @@
     padding: 0;
     list-style: none;
     }
+    a[data-toggle="collapse"] {
+    position: relative;
+}
 
+    .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
     .sidebar-nav li {
     text-indent: 20px;
     line-height: 40px;
@@ -1295,7 +1319,7 @@
     }
 
     .sidebar-nav>.sidebar-brand {
-    height: 65px;
+    height: 45px;
     font-size: 18px;
     line-height: 60px;
     }
@@ -1330,6 +1354,7 @@
         position: relative;
         margin-right: 0;
     }
+
     }
 
 </style>
@@ -1343,20 +1368,107 @@
                 <form class="form-inline my-2 my-md-0"> </form>
             </div>
         </nav>
+        
         <div id="wrapper" class="toggled">
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
+                <!-- <div class="sidebar-header">
+                    <h3>Paper Dashboard Pro </h3>
+                </div> 
+                <hr class="new2"> -->
                 <ul class="sidebar-nav">
-                    <li class="sidebar-brand"> <a href="#"> Start Bootstrap </a> </li>
-                    <li> <a href="#">Dashboard</a> </li>
-                    <li> <a href="#">Shortcuts</a> </li>
+                    <li class="sidebar-brand"> <a href="#"><img src=" " class="img-fluid" >Paper Dashboard Pro </a> </li>
+                    <hr class="new1">
+                    <li class="active">
+                        <a href="#csubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-user" aria-hidden="true" style="margin-right: 20px;"></i>
+                            Chet Foker </a>
+                        <ul class="collapse list-unstyled" id="csubmenu">
+                            <li>
+                                <a href="#" style="margin-left: 20px;">1</a>
+                            </li>
+                            <li>
+                                <a href="#" style="margin-left: 20px;">2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li class="sidebar-brand"> <a href="#">Chet Foker </a> </li> -->
+                    <hr class="new2">
+                     <li class="active">
+                        <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-sliders" aria-hidden="true"  style="margin-right: 20px;"></i>DASHBOARD</a>
+                        <ul class="collapse list-unstyled" id="dashboardSubmenu">
+                            <li>
+                                <a href="overview.html" style="margin-left: 20px;">Overview</a>
+                            </li>
+                            <li>
+                                <a href="#" style="margin-left: 20px;">Stats</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#compSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-cube" aria-hidden="true" style="margin-right: 20px;"></i>COMPONENTS</a>
+                        <ul class="collapse list-unstyled" id="compSubmenu">
+                            <li>
+                                <a href="#" style="margin-left: 20px;">Regular Table</a>
+                            </li>
+                            <li>
+                                <a href="Extable.html" style="margin-left: 20px;">Extended Table</a>
+                            </li>
+                            <li>
+                                <a href="#" style="margin-left: 20px;">Paginated Table</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#formsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-book" aria-hidden="true" style="margin-right: 20px;"></i>FORMS</a>
+                        <ul class="collapse list-unstyled" id="formsSubmenu">
+                            <li>
+                                <a href="#" style="margin-left: 20px;">Form 1</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#" style="margin-left: 20px;">Form 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                     <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-th-list" aria-hidden="true" style="margin-right: 20px;"></i>TABLE LIST</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#" style="margin-left: 20px;">list 1</a>
+                            </li>
+                            <li>
+                                <a href="#"style="margin-left: 20px;">list 2</a>
+                            </li>
+                            <li>
+                                <a href="#"style="margin-left: 20px;">list 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#mapSubmenu"data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-map-o" aria-hidden="true" style="margin-right: 20px;"></i>MAPS</a>
+                        <ul class="collapse list-unstyled" id="mapSubmenu">
+                            <li>
+                                <a href="#" style="margin-left: 20px;">Map 1</a>
+                            </li>
+                            <li>
+                                <a href="#" style="margin-left: 20px;">Map 2</a>
+                            </li>
+                           
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-gift" aria-hidden="true" style="margin-right: 20px;"></i>CHARTS</a>
+                    </li>
+                    <li> <a href="#"><i class="fa fa-calendar-check-o" aria-hidden="true" style="margin-right: 20px;" ></i>CALENDER</a> </li>
+                    <!-- <li> <a href="#">Shortcuts</a> </li>
                     <li> <a href="#">Overview</a> </li>
                     <li> <a href="#">Events</a> </li>
                     <li> <a href="#">About</a> </li>
                     <li> <a href="#">Services</a> </li>
-                    <li> <a href="#">Contact</a> </li>
+                    <li> <a href="#">Contact</a> </li> -->
                 </ul>
-            </div> <!-- /#sidebar-wrapper -->
+            </div> <!--/#sidebar-wrapper -->
             <!-- Page Content -->
             <div id="page-content-wrapper">
 	        <div class="container-fluid">
@@ -1364,8 +1476,8 @@
 	            <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
 	            <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
 	        </div>
-    	</div> <!-- /#page-content-wrapper -->
-</div> <!-- /#wrapper -->
+    	    </div><!-- /#page-content-wrapper -->
+         </div> <!--/#wrapper -->
 </body>
 </html>
 <script>
