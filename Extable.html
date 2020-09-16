@@ -1001,9 +1001,14 @@
     }
 
 
+    .navbar-dark .navbar-toggler-icon {
+        background-image: url('burger.png');
 
+    }
 
-
+    /* .navbar-toggler-icon {
+     background-image: url('burger.png');
+     } */
 
 
     .navbar-nav .nav-link+.nav-link {
@@ -1358,9 +1363,8 @@
     @media(min-width:768px) {
         #wrapper {
             padding-left: 0;
-        }
+    
 
-        #wrapper.toggled {
             padding-right: 250px;
         }
 
@@ -1383,13 +1387,15 @@
         }
 
     }
+     
+
 </style>
 
 <body>
-    <nav class="navbar navbar-expand navbar-dark " style="background:#eeeeee"> <a href="#menu-toggle" id="menu-toggle"
+    <nav class="navbar navbar-expand navbar-dark " style="background:#eeeeee"><a href="#menu-toggle" id="menu-toggle"
             class="navbar-brand "><span class="navbar-toggler-icon p-3"></span></a> <button class="navbar-toggler"
             type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02"
-            aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
 
         <div class="collapse navbar-collapse" id="navbarsExample02">
             <i class="fa fa-ellipsis-v" aria-hidden="true" style="font-size: 20px;"></i>
@@ -1519,7 +1525,7 @@
         <!--/#sidebar-wrapper -->
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="card shadow mb-5 bg-white rounded">
                     <div class="card-body ">
                         <p style="font-size: 25px;">
@@ -1531,6 +1537,7 @@
                                 <thead class="thead-light">
                                     <tr>
                                         <th scope="col">#</th>
+                                        <th scope="col">Name</th>
                                         <th scope="col">Job Position</th>
                                         <th scope="col">Salary</th>
                                         <th scope="col">Actions</th>
@@ -1542,30 +1549,55 @@
                                         <td>Mark</td>
                                         <td>Otto</td>
                                         <td>@mdo</td>
+                                        <td>
+                                            <i class="fa fa-heart-o" aria-hidden="true" style="color: teal ; "></i>
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true" style="color: #ffd300; margin-left: 5px;"></i>
+                                            <i class="fa fa-times" aria-hidden="true" style="color: red; margin-left: 5px;"></i>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
                                         <td>Jacob</td>
                                         <td>Thornton</td>
                                         <td>@fat</td>
+                                        <td>
+                                            <i class="fa fa-heart-o" aria-hidden="true" style="color: teal ; "></i>
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true" style="color: #ffd300; margin-left: 5px;"></i>
+                                            <i class="fa fa-times" aria-hidden="true" style="color: red; margin-left: 5px;"></i>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
                                         <td>Larry</td>
                                         <td>the Bird</td>
                                         <td>@twitter</td>
+                                        <td>
+                                            <i class="fa fa-heart-o" aria-hidden="true" style="color: teal ; "></i>
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true" style="color: #ffd300; margin-left: 5px;"></i>
+                                            <i class="fa fa-times" aria-hidden="true" style="color: red; margin-left: 5px;"></i>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">4</th>
                                         <td>John Doe</td>
                                         <td>the Bird</td>
                                         <td>@twitter</td>
+                                        <td>
+                                            <i class="fa fa-heart-o" aria-hidden="true" style="color: teal ; "></i>
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true" style="color: #ffd300; margin-left: 5px;"></i>
+                                            <i class="fa fa-times" aria-hidden="true" style="color: red; margin-left: 5px;"></i>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">5</th>
                                         <td>Alex Mike</td>
                                         <td>the Bird</td>
                                         <td>@twitter</td>
+                                        <td>
+                                            <i class="fa fa-heart-o" aria-hidden="true" style="color: teal ; "></i>
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true" style="color: #ffd300; margin-left: 5px;"></i>
+                                            <i class="fa fa-times" aria-hidden="true" style="color: red; margin-left: 5px;"></i>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1585,6 +1617,7 @@
 
                                         <tr>
                                             <th scope="col">#</th>
+                                            <th scope="col">Name</th>
                                             <th scope="col">Job Position</th>
                                             <th scope="col">Salary</th>
                                             <th scope="col">Active</th>
@@ -1596,30 +1629,60 @@
                                             <td>Mark</td>
                                             <td>Otto</td>
                                             <td>@mdo</td>
+                                            <td>
+                                                <span class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitches">
+                                                    <label class="custom-control-label" for="customSwitches"></label>
+                                                </span>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
                                             <td>Jacob</td>
                                             <td>Thornton</td>
                                             <td>@fat</td>
+                                            <td>
+                                                <span class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitches">
+                                                    <label class="custom-control-label" for="customSwitches"></label>
+                                                </span>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">3</th>
                                             <td>Larry</td>
                                             <td>the Bird</td>
                                             <td>@twitter</td>
+                                            <td>
+                                                <span class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitches">
+                                                    <label class="custom-control-label" for="customSwitches"></label>
+                                                </span>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">4</th>
                                             <td>John Doe</td>
                                             <td>the Bird</td>
                                             <td>@twitter</td>
+                                            <td>
+                                                <span class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitches">
+                                                    <label class="custom-control-label" for="customSwitches"></label>
+                                                </span>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">5</th>
                                             <td>Alex Mike</td>
                                             <td>the Bird</td>
                                             <td>@twitter</td>
+                                            <td>
+                                                <span class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitches">
+                                                    <label class="custom-control-label" for="customSwitches"></label>
+                                                </span>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
